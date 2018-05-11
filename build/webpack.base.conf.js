@@ -7,7 +7,8 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-module.exports = {
+
+const webpackConfig = { // 原来的 module.exports 代码赋值给变量 
   entry: {
     app: './src/main.js'
   },
@@ -65,3 +66,11 @@ module.exports = {
     ]
   }
 }
+
+const vuxLoader = require('vux-loader')
+module.exports = vuxLoader.merge(webpackConfig, {
+    plugins: ['vux-ui'],
+    plugins: [{
+        name: 'duplicate-style'
+      }]
+  })

@@ -1,23 +1,28 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from "vue";
-import App from "./App";
-import router from "./router";
-import fastClick from "fastclick";
+import Vue from 'vue'
+import FastClick from 'fastclick'
+import VueRouter from 'vue-router'
+import App from './App'
+import Home from './components/HelloFromVux'
 
-import { Flexbox, FlexboxItem, Swiper } from "vux";
+Vue.use(VueRouter)
 
-Vue.component("flexbox", Flexbox);
-Vue.component("flexbox-item", FlexboxItem);
-Vue.component("swiper", Swiper);
+const routes = [{
+  path: '/',
+  component: Home
+}]
 
-Vue.config.productionTip = false;
+const router = new VueRouter({
+  routes
+})
 
-fastClick.attach(document.body);
+FastClick.attach(document.body)
+
+Vue.config.productionTip = false
+
 /* eslint-disable no-new */
 new Vue({
-    el: "#app",
-    router,
-    template: "<App/>",
-    components: { App }
-});
+  router,
+  render: h => h(App)
+}).$mount('#app-box')

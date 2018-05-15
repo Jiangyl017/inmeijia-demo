@@ -1,5 +1,15 @@
 <template>
-  <flexbox>
+  <XHeader :left-options="{backText:''}" title="in美家" :right-options="{showMore:true}">
       
-  </flexbox>
+  </XHeader>
 </template>
+<script>
+import { XHeader } from 'vux'
+
+export default {
+  components: {
+    XHeader
+  }
+}
+  
+</script>

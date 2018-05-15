@@ -5,8 +5,8 @@
             <div class="bg-text">
                 01
             </div>
-            <div class="solgan-block">
-                <p class="solgan1">VR全屋装所见即所得</p>
+            <div class="slogan-block">
+                <p class="slogan">VR全屋装所见即所得</p>
                 <span class="write-v">VR</span>
             </div>
             <div class="explain">
@@ -27,55 +27,31 @@
     </div>
 </template>
 <script>
-    import { Flexbox, Swiper } from "vux";
-    export default {
-        components: {
-            Swiper,
-            Flexbox
-        },
-        data() {
-            return {
-                swiperList: [
-                    {
-                        url: "javascript",
-                        img: require("@/assets/images/banner1@3.png"),
-                        title: ""
-                    },
-                    {
-                        url: "javascript",
-                        img: require("@/assets/images/banner2@3.png"),
-                        title: ""
-                    }
-                ]
-            };
-        },
-        methods: {}
-    };
+import { Flexbox, Swiper } from "vux";
+export default {
+    components: {
+        Swiper,
+        Flexbox
+    },
+    data() {
+        return {
+            swiperList: [
+                {
+                    url: "javascript",
+                    img: require("@/assets/images/banner1@3.png"),
+                    title: ""
+                },
+                {
+                    url: "javascript",
+                    img: require("@/assets/images/banner2@3.png"),
+                    title: ""
+                }
+            ]
+        };
+    },
+    methods: {}
+};
 </script>
 <style lang="less">
-    .swiper-dots {
-        left: 0.76rem;
-    }
 
-    #banner-swiper {
-        .vux-icon-dot {
-            width: 0.08rem;
-            height: 0.08rem;
-            border-radius: 50%;
-            border: 0.02rem solid #666;
-            background-color: #fff;
-            color: #fff;
-            &.active {
-                background-color: #666;
-            }
-        }
-    }
-
-    .bg-text {
-        text-align: center;
-        font-family: HelveticaNeue-CondensedBold;
-        font-size: 2.4rem;
-        color: #edf2f2;
-        position: relative;
-    }
 </style>

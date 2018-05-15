@@ -15,6 +15,7 @@ export default {
 
 <style lang="less">
 @import "~vux/src/styles/reset.less";
+@import "./assets/css/style.css";                                                                                                                                                                                               
 
 body {
     background-color: #fbf9fe;

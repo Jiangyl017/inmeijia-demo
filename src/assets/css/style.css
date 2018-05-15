@@ -1,0 +1,33 @@
+.slogan {
+  font: 48px PingFangSC-Regular;
+  color: #333;
+}
+.swiper-dots {
+  left: 0.76rem;
+}
+#banner-swiper .vux-icon-dot {
+  width: 0.08rem;
+  height: 0.08rem;
+  border-radius: 50%;
+  border: 0.02rem solid #666;
+  background-color: #fff;
+  color: #fff;
+}
+#banner-swiper .vux-icon-dot.active {
+  background-color: #666;
+}
+.caption {
+  padding: 0.48rem 1.04rem;
+}
+.caption .bg-text {
+  padding-left: 1.22rem;
+  font-family: HelveticaNeue-CondensedBold;
+  font-size: 2.4rem;
+  color: #edf2f2;
+  position: relative;
+}
+.caption .bg-text .slogan {
+  width: 240px;
+  font: 48px PingFangSC-Regular;
+  color: #333;
+}

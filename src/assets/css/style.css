@@ -1,11 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+.explain {
+  font: 0.26rem PingFangSC-Regular;
+  color: #999;
+}
 .slogan {
-  font: 48px PingFangSC-Regular;
+  font: 0.48rem PingFangSC-Regular;
   color: #333;
 }
-.swiper-dots {
+#home .swiper-dots {
   left: 0.76rem;
 }
-#banner-swiper .vux-icon-dot {
+#home #banner-swiper .vux-icon-dot {
   width: 0.08rem;
   height: 0.08rem;
   border-radius: 50%;
@@ -13,21 +20,148 @@
   background-color: #fff;
   color: #fff;
 }
-#banner-swiper .vux-icon-dot.active {
+#home #banner-swiper .vux-icon-dot.active {
   background-color: #666;
 }
-.caption {
-  padding: 0.48rem 1.04rem;
-}
-.caption .bg-text {
-  padding-left: 1.22rem;
-  font-family: HelveticaNeue-CondensedBold;
-  font-size: 2.4rem;
-  color: #edf2f2;
+#home .caption {
+  padding: 1.04rem 1.04rem 0.78rem 1.04rem;
   position: relative;
 }
-.caption .bg-text .slogan {
-  width: 240px;
-  font: 48px PingFangSC-Regular;
+#home .caption .bg-text {
+  text-align: center;
+  font: 2.4rem/2.4rem HelveticaNeue-CondensedBold;
+  color: #edf2f2;
+  height: 2.4rem;
+}
+#home .caption .slogan-block {
+  position: absolute;
+  bottom: 1.08rem;
+  left: 1.04rem;
+  margin: auto;
+}
+#home .caption .slogan-block .slogan {
+  width: 2.4rem;
+  font: 0.48rem PingFangSC-Regular;
   color: #333;
+}
+#home .caption .decorate {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+#home .caption .decorate .txt {
+  font: 0.14rem HelveticaNeue-CondensedBold;
+  color: #6f727c;
+  transform: rotate(-90deg);
+  margin-bottom: 5px;
+}
+#home .caption .decorate .line {
+  height: 0.4rem;
+  width: 1px;
+}
+#home .caption .decorate .line::before {
+  border-color: #e0e2eb;
+}
+#home .feature {
+  position: relative;
+  padding: 0 1.04rem;
+  height: 7.68rem;
+  background-size: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+#home .feature .explain {
+  width: 4.4rem;
+  font: 0.26rem PingFangSC-Regular;
+  color: #999;
+  margin-bottom: 0.88rem;
+}
+#home .feature .more {
+  width: 2rem;
+  height: 0.64rem;
+  padding: 0 0.36rem;
+  text-align: center;
+  font: 0.24rem/0.64rem PingFangSC-Regular;
+}
+#home .feature .more a {
+  position: relative;
+  color: #333;
+}
+#home .feature .more::before {
+  border-radius: 0.64rem;
+  border-color: #666;
+}
+#home .feature .more .arrowL {
+  width: 0.2rem;
+  height: 0.16rem;
+}
+#home .feature .download {
+  position: absolute;
+  right: 1.34rem;
+  top: 2.07rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  text-align: center;
+}
+#home .feature .download .downloadBtn {
+  position: relative;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  background-color: #39d5c2;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0.1rem 0.6rem #39d5c2;
+}
+#home .feature .download .downloadBtn .explain {
+  width: 4.4rem;
+  font: 0.26rem PingFangSC-Regular;
+  color: #999;
+  margin-bottom: 0.88rem;
+  width: 1.4rem;
+  position: absolute;
+  top: 0.05rem;
+  left: 1.1rem;
+  text-align: left;
+}
+#home .feature .download .mycanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#register {
+  background-color: #f5f5f5;
+  height: 100vh;
+  padding-top: 0.72rem;
+}
+#register .logo {
+  margin: 0 auto 0.56rem;
+  text-align: center;
+}
+#register .title {
+  font: 0.48rem PingFangSC-Regular;
+  color: #333;
+  font-size: 0.28rem;
+  text-align: center;
+  margin-bottom: 0.24rem;
+}
+#register .formList {
+  padding-top: 0.24rem;
+  text-align: center;
+}
+#register .formList .explain {
+  margin: 0 auto 0.8rem;
+}
+#register .formList .group {
+  width: 6.16rem;
+  margin: 0 auto 0.4rem;
+}
+#register .formList .group .weui-cells {
+  font-size: 0.28rem;
+}
+#register .formList .submitBtn {
+  font: 0.28rem PingFangSC-Regular;
+  height: 0.8rem;
 }

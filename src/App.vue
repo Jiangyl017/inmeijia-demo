@@ -6,16 +6,17 @@
 </template>
 
 <script>
-import myheader from '@/components/header.vue'
+import myheader from "@/components/header.vue";
 export default {
-    components:{myheader},
+    components: { myheader },
     name: "app"
 };
 </script>
 
 <style lang="less">
 @import "~vux/src/styles/reset.less";
-@import "./assets/css/style.css";                                                                                                                                                                                               
+@import "~vux/src/styles/1px.less";
+@import "./assets/css/style.css";
 
 body {
     background-color: #fbf9fe;

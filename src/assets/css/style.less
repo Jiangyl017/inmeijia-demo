@@ -17,6 +17,10 @@
   color: #333;
 }
 #home {
+  background-color: #fafafa;
+  background-size: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
   .swiper-dots {
     left: 0.76rem;
   }
@@ -76,9 +80,7 @@
     position: relative;
     padding: 0 1.04rem;
     height: 7.68rem;
-    background-size: 100%;
-    background-position: center bottom;
-    background-repeat: no-repeat;
+
     .explain {
       width: 4.4rem;
       font: 0.26rem PingFangSC-Regular;
@@ -148,6 +150,10 @@
   .logo {
     margin: 0 auto 0.56rem;
     text-align: center;
+    img {
+      width: 2rem;
+      height: 0.65rem;
+    }
   }
   .title {
     .slogan;
@@ -164,13 +170,21 @@
     .group {
       width: 6.16rem;
       margin: 0 auto 0.4rem;
+      color: #999;
       .weui-cells {
         font-size: 0.28rem;
+        .weui-input::placeholder {
+          color: #999;
+        }
       }
     }
     .submitBtn {
+      width: 6.16rem;
       font: 0.28rem PingFangSC-Regular;
       height: 0.8rem;
+      &::after {
+        border: 0;
+      }
     }
   }
 }

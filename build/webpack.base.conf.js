@@ -4,7 +4,7 @@ const utils = require("./utils");
 const config = require("../config");
 const vueLoaderConfig = require("./vue-loader.conf");
 const vuxLoader = require("vux-loader");
-
+const autoprefixer = require("autoprefixer");
 function resolve(dir) {
   return path.join(__dirname, "..", dir);
 }
@@ -26,7 +26,7 @@ let webpackConfig = {
     extensions: [".js", ".vue", ".json"],
     alias: {
       vue$: "vue/dist/vue.esm.js",
-      '@': path.resolve(__dirname, '../src'),
+      "@": path.resolve(__dirname, "../src")
     }
   },
   module: {
@@ -34,7 +34,20 @@ let webpackConfig = {
       {
         test: /\.vue$/,
         loader: "vue-loader",
-        options: vueLoaderConfig
+        options: {
+          // vue-loader options go here
+          vueLoaderConfig,
+          postcss: [
+            require("autoprefixer")({
+              browsers: [
+                "last 10 Chrome versions",
+                "last 5 Firefox versions",
+                "Safari >= 6",
+                "ie > 8"
+              ]
+            })
+          ]
+        }
       },
       {
         test: /\.js$/,
@@ -74,7 +87,7 @@ module.exports = vuxLoader.merge(webpackConfig, {
     "vux-ui",
     {
       name: "less-theme",
-      path: path.resolve(__dirname, '../src/assets/css/theme.less')
+      path: path.resolve(__dirname, "../src/assets/css/theme.less")
     },
     {
       name: "duplicate-style",

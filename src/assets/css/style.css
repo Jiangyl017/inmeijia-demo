@@ -9,6 +9,12 @@
   font: 0.48rem PingFangSC-Regular;
   color: #333;
 }
+#home {
+  background-color: #fafafa;
+  background-size: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
 #home .swiper-dots {
   left: 0.76rem;
 }
@@ -66,9 +72,6 @@
   position: relative;
   padding: 0 1.04rem;
   height: 7.68rem;
-  background-size: 100%;
-  background-position: center bottom;
-  background-repeat: no-repeat;
 }
 #home .feature .explain {
   width: 4.4rem;
@@ -140,6 +143,10 @@
   margin: 0 auto 0.56rem;
   text-align: center;
 }
+#register .logo img {
+  width: 2rem;
+  height: 0.65rem;
+}
 #register .title {
   font: 0.48rem PingFangSC-Regular;
   color: #333;
@@ -157,11 +164,19 @@
 #register .formList .group {
   width: 6.16rem;
   margin: 0 auto 0.4rem;
+  color: #999;
 }
 #register .formList .group .weui-cells {
   font-size: 0.28rem;
 }
+#register .formList .group .weui-cells .weui-input::placeholder {
+  color: #999;
+}
 #register .formList .submitBtn {
+  width: 6.16rem;
   font: 0.28rem PingFangSC-Regular;
   height: 0.8rem;
+}
+#register .formList .submitBtn::after {
+  border: 0;
 }

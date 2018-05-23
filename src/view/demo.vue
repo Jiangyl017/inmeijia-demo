@@ -1,5 +1,5 @@
 <template>
-    <div id="home">
+    <div id="home" :style="`background-image:url(${bg})`">
         <swiper id="banner-swiper" :show-desc-mask="false" dots-class="swiper-dots" :list="swiperList" :aspect-ratio="630/1125"></swiper>
         <div class="caption">
             <div class="bg-text">
@@ -14,7 +14,7 @@
             </div>
             
         </div>
-        <div class="feature" :style="`background-image:url(${bg})`">
+        <div class="feature" >
             <div class="explain">
                 区别于装修公司,我们提供整套的VR全景装修方案100%还原新家
             </div>
@@ -68,17 +68,25 @@ export default {
     },
     methods: {
         update() {
+            let radio =
+                    parseInt(
+                        getComputedStyle(window.document.documentElement)[
+                            "font-size"
+                        ]
+                    ) / 100,
+                baseWidth = 25,
+                step = 35;
             if (this.circle.length == 0) {
                 for (let i = 0; i < 4; i++) {
                     this.circle.push({
-                        r: 25 + i * 35,
+                        r: baseWidth * radio + i * step * radio,
                         alpha: 1 - i * 0.25
                     });
                 }
             } else {
                 this.circle.map((v, index, arr) => {
-                    if (arr[0].r > 60) {
-                        v.r = 25 + index * 35;
+                    if (arr[0].r > baseWidth + step * radio) {
+                        v.r = baseWidth * radio + index * step * radio;
                     }
                     v.r += 0.2;
                 });
@@ -87,12 +95,18 @@ export default {
         },
         draw() {
             let canvas = this.$refs.ripple,
-                context = canvas.getContext("2d");
-            canvas.width = 260;
-            canvas.height = 260;
+                context = canvas.getContext("2d"),
+                radio =
+                    parseInt(
+                        getComputedStyle(window.document.documentElement)[
+                            "font-size"
+                        ]
+                    ) / 100,
+                w = (canvas.width = 260 * radio),
+                h = (canvas.height = 260 * radio);
             for (let v of this.circle) {
                 context.beginPath();
-                context.arc(130, 130, v.r, 0, 2 * Math.PI);
+                context.arc(w / 2, h / 2, v.r, 0, 2 * Math.PI);
                 context.strokeStyle = `rgba(57,213,194,${v.alpha})`;
                 context.stroke();
                 context.closePath();

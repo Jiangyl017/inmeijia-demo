@@ -5,7 +5,8 @@
   "author": "jyl <602908219@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev":
+      "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
@@ -64,6 +65,10 @@
     "npm": ">= 3.0.0"
   },
   "browserslist": [
+    "last 20 Chrome versions",
+    "last 20 Firefox versions",
+    "Safari >= 6",
+    "ie> 8",
     "iOS >= 7",
     "Android >= 4.1"
   ]

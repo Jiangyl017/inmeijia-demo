@@ -45,9 +45,9 @@ export default {
     },
     data() {
         return {
-            arrowB: require("../assets/images/箭头1.svg"),
-            arrowL: require("../assets/images/箭头2.svg"),
-            bg: require("../assets/images/vr@3.png"),
+            arrowB: require("@/assets/images/箭头1.svg"),
+            arrowL: require("@/assets/images/箭头2.svg"),
+            bg: require("@/assets/images/vr@3.png"),
             swiperList: [
                 {
                     url: "javascript",
